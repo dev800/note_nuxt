@@ -8,7 +8,7 @@ const app = new Koa()
 const config = require('../nuxt.config.js')
 config.dev = app.env !== 'production'
 
-async function start() {
+async function start () {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
@@ -33,6 +33,7 @@ async function start() {
   })
 
   app.listen(port, host)
+
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
     badge: true

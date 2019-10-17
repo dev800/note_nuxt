@@ -33,7 +33,8 @@ module.exports = {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
@@ -49,13 +50,40 @@ module.exports = {
    */
   axios: {},
   /*
-   ** Build configuration
+   ** Build configuration https://zh.nuxtjs.org/api/configuration-build
    */
   build: {
+    splitChunks: {
+      layouts: true, // default is false
+      pages: true,
+      commons: true
+    },
+    extractCSS: true,
     transpile: [/^element-ui/],
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) { },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        collapseWhitespace: false,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeAttributeQuotes: false,
+        removeComments: false,
+        removeEmptyAttributes: true,
+        removeOptionalTags: false,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: false,
+        removeStyleLinkTypeAttributes: false,
+        removeTagWhitespace: false,
+        sortClassName: false,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
+    }
   }
 }

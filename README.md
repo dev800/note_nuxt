@@ -1,6 +1,6 @@
 # note
 
-> My wondrous Nuxt.js project
+> Note with nuxt&#39;s project
 
 ## Build Setup
 
