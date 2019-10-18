@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 module.exports = {
   mode: 'universal',
   /*
@@ -63,7 +64,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) { },
+    extend (config: object, ctx: any) { },
     html: {
       minify: {
         collapseBooleanAttributes: true,
