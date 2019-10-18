@@ -64,7 +64,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend (config: object, ctx: any) { },
+    extend (config: any, ctx: any) { },
     html: {
       minify: {
         collapseBooleanAttributes: true,
